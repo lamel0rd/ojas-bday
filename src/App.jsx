@@ -140,11 +140,11 @@ function App() {
               src={i9w}
               alt=""
               className="card-photo-bottomleft"
-              style={positions[9]
-                ? { position: 'fixed', left: positions[9].x, top: positions[9].y, width: 85, height: 'auto', cursor: 'grab', zIndex: 20 }
+              style={positions[99]
+                ? { position: 'fixed', left: positions[99].x, top: positions[99].y, width: 85, height: 'auto', cursor: 'grab', zIndex: 20 }
                 : { cursor: 'grab' }}
-              onMouseDown={(e) => onDragStart(e, { id: 9 })}
-              onTouchStart={(e) => onTouchStart(e, { id: 9 })}
+              onMouseDown={(e) => onDragStart(e, { id: 99 })}
+              onTouchStart={(e) => onTouchStart(e, { id: 99 })}
               draggable={false}
             />
 
