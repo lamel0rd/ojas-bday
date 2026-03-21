@@ -28,6 +28,18 @@
   user-select: none;
 }
 
+.cake-hint {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  white-space: nowrap;
+  z-index: 10;
+  user-select: none;
+}
+
 .cake-img {
   position: absolute;
   width: 150px;

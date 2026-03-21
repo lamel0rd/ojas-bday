@@ -16,8 +16,9 @@ import i14 from './assets/i14.png'
 import i15 from './assets/i15.png'
 import i16 from './assets/i16.png'
 
-const stickerImgs = [i3, i4, i6, i10w, i11w, i12w, i13w, i14, i15, i16]
 
+const stickerImgs = [i3, i4, i6, i10w, i11w, i12w, i13w, i14, i15, i16]
+const wink = ";)";
 const messages = [
   {
     title: "Happy Birthday, OJAS! ",
@@ -136,6 +137,7 @@ function App() {
       <>
         <div className="scene">
           <p className="cake-counter">{clicks} / 20</p>
+          <p className="cake-hint">tap the cake to eat it {wink}</p>
           <img
             src={cakeImg}
             alt="cake"
