@@ -136,7 +136,17 @@ function App() {
           <div className="card-stack">
             <img src={i1} alt="" className="card-photo" draggable={false} />
             <img src={i2} alt="" className="card-photo-right" draggable={false} />
-            <img src={i9w} alt="" className="card-photo-bottomleft" draggable={false} />
+            <img
+              src={i9w}
+              alt=""
+              className="card-photo-bottomleft"
+              style={positions[9]
+                ? { position: 'fixed', left: positions[9].x, top: positions[9].y, width: 85, height: 'auto', cursor: 'grab', zIndex: 20 }
+                : { cursor: 'grab' }}
+              onMouseDown={(e) => onDragStart(e, { id: 9 })}
+              onTouchStart={(e) => onTouchStart(e, { id: 9 })}
+              draggable={false}
+            />
 
             <div className={`card${dir ? ` card--exit-${dir}` : ''}`}>
               <h2 className="card-title">{messages[current].title}</h2>
