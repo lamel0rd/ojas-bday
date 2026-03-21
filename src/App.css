@@ -232,22 +232,33 @@
 
   .card-wrapper {
     padding-top: 172px;
+    padding-bottom: 35px;
   }
 
+  /* i1 — top-left above card */
   .card-photo {
-    width: 152px;
+    width: 110px;
+    left: 16px;
   }
 
+  /* i2 — top-right above card (mirror of i1) */
   .card-photo-right {
-    width: 152px;
-    right: -60px;
-    top: 16px;
+    width: 110px;
+    right: 16px;
+    left: auto;
+    top: auto;
+    bottom: 100%;
+    margin-bottom: -8px;
+    transform: rotate(6deg);
   }
 
+  /* i9w — left side, vertically centred on card */
   .card-photo-bottomleft {
-    width: 152px;
-    left: -20px;
-    bottom: -70px;
+    width: 85px;
+    left: -12px;
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%) rotate(-12deg);
   }
 
   .card {
@@ -289,20 +300,19 @@
     height: 110px !important;
   }
 
-  /* Top band — two staggered rows (only when not being dragged) */
-  .sticker:not(.sticker--dragging):nth-child(1)  { top: 2% !important;    left: 2% !important;   right: auto !important; bottom: auto !important; }
-  .sticker:not(.sticker--dragging):nth-child(2)  { top: 11% !important;   left: 19% !important;  right: auto !important; bottom: auto !important; }
-  .sticker:not(.sticker--dragging):nth-child(3)  { top: 2% !important;    left: 36% !important;  right: auto !important; bottom: auto !important; }
-  .sticker:not(.sticker--dragging):nth-child(4)  { top: 11% !important;   left: 53% !important;  right: auto !important; bottom: auto !important; }
-  .sticker:not(.sticker--dragging):nth-child(5)  { top: 2% !important;    left: 70% !important;  right: auto !important; bottom: auto !important; }
-  .sticker:not(.sticker--dragging):nth-child(6)  { top: 11% !important;   left: 78% !important;  right: auto !important; bottom: auto !important; }
+  /* Top band — 5 stickers */
+  .sticker:not(.sticker--dragging):nth-child(1)  { top: 2% !important;   left: 2% !important;   right: auto !important; bottom: auto !important; }
+  .sticker:not(.sticker--dragging):nth-child(2)  { top: 11% !important;  left: 22% !important;  right: auto !important; bottom: auto !important; }
+  .sticker:not(.sticker--dragging):nth-child(3)  { top: 2% !important;   left: 42% !important;  right: auto !important; bottom: auto !important; }
+  .sticker:not(.sticker--dragging):nth-child(4)  { top: 11% !important;  left: 62% !important;  right: auto !important; bottom: auto !important; }
+  .sticker:not(.sticker--dragging):nth-child(5)  { top: 2% !important;   left: 78% !important;  right: auto !important; bottom: auto !important; }
 
-  /* Bottom band — two staggered rows (only when not being dragged) */
-  .sticker:not(.sticker--dragging):nth-child(7)  { bottom: 2% !important;  left: 2% !important;   right: auto !important; top: auto !important; }
-  .sticker:not(.sticker--dragging):nth-child(8)  { bottom: 11% !important; left: 19% !important;  right: auto !important; top: auto !important; }
-  .sticker:not(.sticker--dragging):nth-child(9)  { bottom: 2% !important;  left: 36% !important;  right: auto !important; top: auto !important; }
-  .sticker:not(.sticker--dragging):nth-child(10) { bottom: 11% !important; left: 53% !important;  right: auto !important; top: auto !important; }
-  .sticker:not(.sticker--dragging):nth-child(11) { bottom: 2% !important;  left: 70% !important;  right: auto !important; top: auto !important; }
+  /* Bottom band — 5 stickers */
+  .sticker:not(.sticker--dragging):nth-child(6)  { bottom: 2% !important;  left: 2% !important;   right: auto !important; top: auto !important; }
+  .sticker:not(.sticker--dragging):nth-child(7)  { bottom: 11% !important; left: 22% !important;  right: auto !important; top: auto !important; }
+  .sticker:not(.sticker--dragging):nth-child(8)  { bottom: 2% !important;  left: 42% !important;  right: auto !important; top: auto !important; }
+  .sticker:not(.sticker--dragging):nth-child(9)  { bottom: 11% !important; left: 62% !important;  right: auto !important; top: auto !important; }
+  .sticker:not(.sticker--dragging):nth-child(10) { bottom: 2% !important;  left: 78% !important;  right: auto !important; top: auto !important; }
 }
 
 @media (max-width: 360px) {

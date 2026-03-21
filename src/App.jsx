@@ -11,8 +11,11 @@ import i10w from './assets/i10w.png'
 import i11w from './assets/i11w.png'
 import i12w from './assets/i12w.png'
 import i13w from './assets/i13w.png'
+import i14 from './assets/i14.png'
+import i15 from './assets/i15.png'
+import i16 from './assets/i16.png'
 
-const stickerImgs = [i3, i4, i6, i10w, i11w, i12w, i13w]
+const stickerImgs = [i3, i4, i6, i10w, i11w, i12w, i13w, i14, i15, i16]
 
 const messages = [
   {
@@ -45,6 +48,9 @@ const stickers = [
   { id: 9,  top: '26%',   left: '1%',    right: 'auto', bottom: 'auto', rotate: '-7deg',  w: 176, h: 176 },
   { id: 10, top: '5%',    left: '2%',    right: 'auto', bottom: 'auto', rotate: '14deg',  w: 176, h: 176 },
   { id: 11, top: 'auto',  left: 'auto',  right: '0%',   bottom: '3%',   rotate: '-9deg',  w: 176, h: 176 },
+  { id: 14, top: 'auto',  left: '5%',    right: 'auto', bottom: '8%',   rotate: '-6deg',  w: 176, h: 176 },
+  { id: 15, top: 'auto',  left: '38%',   right: 'auto', bottom: '5%',   rotate: '9deg',   w: 176, h: 176 },
+  { id: 16, top: 'auto',  left: 'auto',  right: '5%',   bottom: '8%',   rotate: '-12deg', w: 176, h: 176 },
 ]
 
 function App() {
@@ -131,6 +137,7 @@ function App() {
             <img src={i1} alt="" className="card-photo" draggable={false} />
             <img src={i2} alt="" className="card-photo-right" draggable={false} />
             <img src={i9w} alt="" className="card-photo-bottomleft" draggable={false} />
+
             <div className={`card${dir ? ` card--exit-${dir}` : ''}`}>
               <h2 className="card-title">{messages[current].title}</h2>
               <p className="card-text">{messages[current].text}</p>
