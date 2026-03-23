@@ -365,25 +365,32 @@
     height: 44px;
   }
 
-  /* Stickers: shrink and arrange in two bands (top + bottom) so none overlap the card */
+  /* Stickers: 160px, placed per requested mobile layout */
   .sticker {
-    width: 150px !important;
-    height: 150px !important;
+    width: 160px !important;
+    height: 160px !important;
   }
 
-  /* Top band — 5 stickers */
-  .sticker:not(.sticker--dragging):nth-child(1)  { top: 2% !important;   left: 2% !important;   right: auto !important; bottom: auto !important; }
-  .sticker:not(.sticker--dragging):nth-child(2)  { top: 11% !important;  left: 22% !important;  right: auto !important; bottom: auto !important; }
-  .sticker:not(.sticker--dragging):nth-child(3)  { top: 2% !important;   left: 42% !important;  right: auto !important; bottom: auto !important; }
-  .sticker:not(.sticker--dragging):nth-child(4)  { top: 11% !important;  left: 62% !important;  right: auto !important; bottom: auto !important; }
-  .sticker:not(.sticker--dragging):nth-child(5)  { top: 2% !important;   left: 78% !important;  right: auto !important; bottom: auto !important; }
-
-  /* Bottom band — 5 stickers */
-  .sticker:not(.sticker--dragging):nth-child(6)  { bottom: 2% !important;  left: 2% !important;   right: auto !important; top: auto !important; }
-  .sticker:not(.sticker--dragging):nth-child(7)  { bottom: 11% !important; left: 22% !important;  right: auto !important; top: auto !important; }
-  .sticker:not(.sticker--dragging):nth-child(8)  { bottom: 2% !important;  left: 42% !important;  right: auto !important; top: auto !important; }
-  .sticker:not(.sticker--dragging):nth-child(9)  { bottom: 11% !important; left: 62% !important;  right: auto !important; top: auto !important; }
-  .sticker:not(.sticker--dragging):nth-child(10) { bottom: 2% !important;  left: 78% !important;  right: auto !important; top: auto !important; }
+  /* i3  — top-left corner (user's "i1") */
+  .sticker:not(.sticker--dragging):nth-child(1)  { top: 1% !important;    left: 1% !important;   right: auto !important; bottom: auto !important; }
+  /* i4  — beside i1, a bit below */
+  .sticker:not(.sticker--dragging):nth-child(2)  { top: 14% !important;   left: 2% !important;   right: auto !important; bottom: auto !important; }
+  /* i6  — left bottom of card, not covering button */
+  .sticker:not(.sticker--dragging):nth-child(3)  { bottom: 22% !important; left: 1% !important;  right: auto !important; top: auto !important; }
+  /* i10w — top-right corner, distance from walls */
+  .sticker:not(.sticker--dragging):nth-child(4)  { top: 1% !important;    right: 3% !important;  left: auto !important;  bottom: auto !important; }
+  /* i11w — right side of card, not covering button */
+  .sticker:not(.sticker--dragging):nth-child(5)  { top: 16% !important;   right: 1% !important;  left: auto !important;  bottom: auto !important; }
+  /* i12w — beside i13w (to its right) */
+  .sticker:not(.sticker--dragging):nth-child(6)  { bottom: 2% !important;  left: 43% !important; right: auto !important; top: auto !important; }
+  /* i13w — bottom-left part */
+  .sticker:not(.sticker--dragging):nth-child(7)  { bottom: 2% !important;  left: 1% !important;  right: auto !important; top: auto !important; }
+  /* i14  — beside i12w (above it, same column) */
+  .sticker:not(.sticker--dragging):nth-child(8)  { bottom: 14% !important; left: 43% !important; right: auto !important; top: auto !important; }
+  /* i15  — below i11w, not covering button */
+  .sticker:not(.sticker--dragging):nth-child(9)  { bottom: 22% !important; right: 1% !important; left: auto !important;  top: auto !important; }
+  /* i16  — bottom-right */
+  .sticker:not(.sticker--dragging):nth-child(10) { bottom: 2% !important;  right: 1% !important; left: auto !important;  top: auto !important; }
 }
 
 @media (max-width: 360px) {
