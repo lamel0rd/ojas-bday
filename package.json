@@ -1,9 +1,9 @@
 {
-  "name": "ojas",
+  "name": "someones turning 20",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://lamel0rd.github.io/justforu",
+  "homepage": "https://lamel0rd.github.io/justforyou",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
