@@ -76,17 +76,22 @@
 /* ── Stickers ── */
 .sticker {
   position: absolute;
-  object-fit: contain;
   pointer-events: auto;
   user-select: none;
+}
+
+.sticker-inner {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
   -webkit-user-drag: none;
-  transform: rotate(var(--r, 0deg));
   animation: stickerPop 0.45s cubic-bezier(0.34, 1.7, 0.64, 1) both;
 }
 
 @keyframes stickerPop {
-  from { opacity: 0; transform: scale(0.3) rotate(var(--r, 0deg)); }
-  to   { opacity: 1; transform: scale(1)   rotate(var(--r, 0deg)); }
+  from { opacity: 0; transform: scale(0.3); }
+  to   { opacity: 1; transform: scale(1); }
 }
 
 /* ── Center content ── */

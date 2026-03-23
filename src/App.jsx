@@ -160,20 +160,25 @@ function App() {
       {flashing && <div className="flash-overlay" />}
       {stickers.map((s, i) => {
         const pos = positions[s.id]
-        const style = pos
-          ? { position: 'fixed', left: pos.x, top: pos.y, width: s.w, height: s.h, '--r': s.rotate, cursor: 'grab', zIndex: 20, animationDelay: `${i * 40}ms` }
-          : { top: s.top, left: s.left, right: s.right, bottom: s.bottom, width: s.w, height: s.h, '--r': s.rotate, cursor: 'grab', zIndex: 20, animationDelay: `${i * 40}ms` }
+        const wrapperStyle = pos
+          ? { position: 'fixed', left: pos.x, top: pos.y, width: s.w, height: s.h, transform: `rotate(${s.rotate})`, cursor: 'grab', zIndex: 20 }
+          : { top: s.top, left: s.left, right: s.right, bottom: s.bottom, width: s.w, height: s.h, transform: `rotate(${s.rotate})`, cursor: 'grab', zIndex: 20 }
         return (
-          <img
+          <div
             key={s.id}
-            src={stickerImgs[i]}
-            alt=""
             className={`sticker${pos ? ' sticker--dragging' : ''}`}
-            style={style}
+            style={wrapperStyle}
             onMouseDown={(e) => onDragStart(e, s)}
             onTouchStart={(e) => onTouchStart(e, s)}
-            draggable={false}
-          />
+          >
+            <img
+              src={stickerImgs[i]}
+              alt=""
+              className="sticker-inner"
+              style={{ animationDelay: `${i * 40}ms` }}
+              draggable={false}
+            />
+          </div>
         )
       })}
 
