@@ -76,8 +76,10 @@ function App() {
     if (next === 20) {
       setTimeout(() => {
         setFlashing(true)
-        setTimeout(() => setPhase('main'), 500)
-        setTimeout(() => setFlashing(false), 1100)
+        setTimeout(() => {
+          setFlashing(false)
+          setPhase('main')
+        }, 1100)
       }, 200)
     }
   }
@@ -159,8 +161,8 @@ function App() {
       {stickers.map((s, i) => {
         const pos = positions[s.id]
         const style = pos
-          ? { position: 'fixed', left: pos.x, top: pos.y, width: s.w, height: s.h, transform: `rotate(${s.rotate})`, cursor: 'grab', zIndex: 20 }
-          : { top: s.top, left: s.left, right: s.right, bottom: s.bottom, width: s.w, height: s.h, transform: `rotate(${s.rotate})`, cursor: 'grab', zIndex: 20 }
+          ? { position: 'fixed', left: pos.x, top: pos.y, width: s.w, height: s.h, '--r': s.rotate, cursor: 'grab', zIndex: 20, animationDelay: `${i * 40}ms` }
+          : { top: s.top, left: s.left, right: s.right, bottom: s.bottom, width: s.w, height: s.h, '--r': s.rotate, cursor: 'grab', zIndex: 20, animationDelay: `${i * 40}ms` }
         return (
           <img
             key={s.id}
